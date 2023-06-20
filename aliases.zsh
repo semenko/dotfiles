@@ -1,20 +1,22 @@
 # Shortcuts
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask --greedy; brew cleanup; mamba update --all'
+
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="source $HOME/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
-alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+#alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
-alias compile="commit 'compile'"
-alias version="commit 'version'"
+#alias compile="commit 'compile'"
+#alias version="commit 'version'"
 
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
-alias sites="cd $HOME/Sites"
-alias lara="sites && cd laravel/"
-alias docs="lara && cd docs/"
+#alias sites="cd $HOME/Sites"
+#alias lara="sites && cd laravel/"
+#alias docs="lara && cd docs/"
 
 # Laravel
 #alias a="php artisan"
