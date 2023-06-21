@@ -22,13 +22,14 @@ fi
 $ZSH_CUSTOM=$HOME/.dotfiles
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
+
 # Update Homebrew recipes
 brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew bundle --file ./Brewfile
-
+brew cleanup
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
