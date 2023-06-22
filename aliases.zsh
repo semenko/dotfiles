@@ -1,6 +1,8 @@
 # Shortcuts
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask --greedy; brew cleanup; mamba update --all'
 
+alias python=python3
+
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="source $HOME/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"

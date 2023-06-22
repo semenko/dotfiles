@@ -3,7 +3,7 @@ set -o xtrace
 
 DOTFILES=${HOME}/.dotfiles
 
-mydotfiles=(".gitconfig" ".gitignore" ".exports" ".inputrc")
+mydotfiles=(".gitconfig" ".zshrc")
 
 for i in "${mydotfiles[@]}"
 do
