@@ -182,15 +182,15 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 #sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
 
-# Stop iTunes from responding to the keyboard media keys
-# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
-
 ###############################################################################
 # Energy saving                                                               #
 ###############################################################################
 
 # Enable lid wakeup
 sudo pmset -a lidwake 1
+
+# No wake for network
+sudo pmset -a womp 0
 
 # Restart automatically on power loss
 sudo pmset -a autorestart 1
@@ -433,10 +433,6 @@ defaults write com.apple.dock show-recents -bool false
 # Reset Launchpad, but keep the desktop wallpaper intact
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
-# Add iOS & Watch Simulator to Launchpad
-#sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
-#sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
-
 # Add a spacer to the left side of the Dock (where the applications are)
 #defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 # Add a spacer to the right side of the Dock (where the Trash is)
@@ -649,11 +645,8 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 # Disable the annoying line marks
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
-# Install the Solarized Dark theme for iTerm
-#open "${HOME}/init/Solarized Dark.itermcolors"
-
-# Don’t display the annoying prompt when quitting iTerm
-#defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+# iterm2 no native full screen
+defaults write com.googlecode.iterm2 UseLionStyleFullscreen -int 0
 
 ###############################################################################
 # Time Machine                                                                #

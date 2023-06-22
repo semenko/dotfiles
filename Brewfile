@@ -60,6 +60,7 @@ cask 'iterm2'
 # do we want mamba from here?
 cask 'mambaforge'
 cask 'microsoft-office'
+cask 'microsoft-teams'
 #cask 'pastebot'
 #cask 'phpmon'
 #cask 'ray'
