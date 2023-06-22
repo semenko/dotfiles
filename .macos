@@ -357,18 +357,6 @@ defaults write com.apple.NetworkBrowser DisableAirDrop -bool true
 # Disable airplay receiver
 defaults write com.apple.controlcenter.plist AirplayRecieverEnabled -bool false
 
-# defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
-
-# Show the ~/Library folder
-#chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
-
-# Show the /Volumes folder
-# sudo chflags nohidden /Volumes
-
-# Remove Dropbox’s green checkmark icons in Finder
-# file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
-# [ -e "${file}" ] && mv -f "${file}" "${file}.bak"
-
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
