@@ -33,3 +33,11 @@ brew cleanup
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
+
+# Open our new apps to configure them
+open -a "Google Chrome Beta"
+open -a "Google Drive"
+open -a "Microsoft Word"
+open -a "Rectangle"
+open -a "Stats"
+open -a "Tailscale"
