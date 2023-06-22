@@ -23,6 +23,7 @@ brew 'mackup'
 #brew 'mas' # Mac App Store manager
 brew 'nmap'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
+brew 'r'
 brew 'svn' # Needed to install fonts
 brew 'sha2'
 brew 'watch'
