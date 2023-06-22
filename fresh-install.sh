@@ -32,7 +32,7 @@ brew bundle --file ./Brewfile
 brew cleanup
 
 # Set macOS preferences - we will run this last because this will reload the shell
-source ./.macos
+source ./macos-prefs
 
 # Open our new apps to configure them
 open -a "Google Chrome Beta"
