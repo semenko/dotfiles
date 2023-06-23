@@ -8,7 +8,7 @@ ssh-keygen -t ed25519 -C "semenko@alum.mit.edu" -f ~/.ssh/id_ed25519
 # Adding your SSH key to the ssh-agent
 eval "$(ssh-agent -s)"
 
-echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_ed25519" | tee ~/.ssh/config
+# echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_ed25519" | tee ~/.ssh/config
 
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 

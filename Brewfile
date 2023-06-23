@@ -24,6 +24,7 @@ brew 'mackup'
 brew 'nmap'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'r'
+brew 'rclone'
 brew 'svn' # Needed to install fonts
 brew 'sha2'
 brew 'watch'

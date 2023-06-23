@@ -1,4 +1,5 @@
 #!/bin/sh
+set -o xtrace
 
 echo "Setting up your Mac..."
 
@@ -15,9 +16,6 @@ if test ! $(which brew); then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
-
-# cp .zshrc $HOME
 
 $ZSH_CUSTOM=$HOME/.dotfiles
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -34,6 +32,22 @@ brew cleanup
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./macos-prefs
 
+
+# Time to make symlinks
+DOTFILES=${HOME}/.dotfiles
+
+ln -Fs "${DOTFILES}/.gitconfig" "${HOME}/.gitconfig"
+ln -Fs "${DOTFILES}/.zshrc" "${HOME}/.zshrc"
+ln -Fs "${DOTFILES}/.p10k.zsh" "${HOME}/.p10k.zsh"
+ln -Fs "${DOTFILES}/config-ssh" "${HOME}/.ssh/config"
+
+
+# HTOP subdir
+mkdir -p $HOME/.config/htop
+ln -Fs ${DOTFILES}/htoprc $HOME/.config/htop/htoprc
+
+
+###
 # Open our new apps to configure them
 open -a "Google Chrome Beta"
 open -a "Google Drive"
