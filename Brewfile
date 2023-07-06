@@ -28,6 +28,7 @@ brew 'r'
 brew 'rclone'
 brew 'svn' # Needed to install fonts
 brew 'sha2'
+brew 'tmux'
 brew 'watch'
 brew 'wget'
 
