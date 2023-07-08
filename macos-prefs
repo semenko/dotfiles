@@ -34,6 +34,9 @@ sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+# Verbose boot
+sudo nvram boot-args="-v"
+
 # Disable transparency in the menu bar and elsewhere on Yosemite
 #defaults write com.apple.universalaccess.reduceTransparency -bool true
 
