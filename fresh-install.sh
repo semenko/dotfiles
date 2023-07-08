@@ -17,7 +17,7 @@ if test ! $(which brew); then
 fi
 
 
-$ZSH_CUSTOM=$HOME/.dotfiles
+ZSH_CUSTOM=$HOME/.dotfiles
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 
