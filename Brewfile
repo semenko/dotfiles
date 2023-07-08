@@ -21,7 +21,6 @@ brew 'httpie'
 brew 'jq' # Used for spatie/visit
 brew 'mackup'
 #brew 'mas' # Mac App Store manager
-brew 'microsoft-remote-desktop'
 brew 'nmap'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'r'
@@ -63,6 +62,7 @@ cask 'iterm2'
 # do we want mamba from here?
 cask 'mambaforge'
 cask 'microsoft-office'
+cask 'microsoft-remote-desktop'
 cask 'microsoft-teams'
 #cask 'pastebot'
 #cask 'phpmon'
@@ -92,13 +92,13 @@ cask 'qlmarkdown'
 cask 'quicklook-json'
 
 # Fonts
-cask 'font-lato'
+cask 'font-lato' 
 cask 'font-open-sans'
 cask 'font-roboto'
 cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
+cask 'font-source-sans-3'
+cask 'font-source-serif-4'
 
 # Mac App Store
 #mas 'Byword', id: 420212497
