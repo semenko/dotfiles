@@ -85,7 +85,7 @@ cask 'wireshark'
 cask 'vlc'
 cask 'vpn-by-google-one'
 cask 'zoom'
-#cask 'zwift'
+cask 'zotero'
 
 # Quicklook
 cask 'qlmarkdown'

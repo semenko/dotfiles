@@ -343,6 +343,10 @@ defaults write com.apple.NetworkBrowser DisableAirDrop -bool true
 # Disable airplay receiver
 defaults write com.apple.controlcenter.plist AirplayRecieverEnabled -bool false
 
+# Disable handoff
+defaults -currentHost write com.apple.coreservices.useractivityd ActivityAdvertisingAllowed -bool no
+defaults -currentHost write com.apple.coreservices.useractivityd ActivityReceivingAllowed -bool no
+
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
