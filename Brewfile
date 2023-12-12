@@ -51,6 +51,7 @@ brew 'imagemagick'
 
 
 # Apps
+cask 'adobe-acrobat-reader'
 cask 'alt-tab'
 cask 'citrix-workspace'
 #cask 'dbngin'
@@ -62,6 +63,7 @@ cask 'insomnia'
 cask 'iterm2'
 # do we want mamba from here?
 cask 'mambaforge'
+cask 'microsoft-edge-beta'
 cask 'microsoft-office'
 cask 'microsoft-remote-desktop'
 cask 'microsoft-teams'

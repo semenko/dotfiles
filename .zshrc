@@ -140,3 +140,4 @@ if [ -f "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"

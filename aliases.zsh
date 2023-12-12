@@ -1,5 +1,5 @@
 # Shortcuts
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask --greedy; brew cleanup; mamba update --all'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask; brew cleanup; mamba update --all'
 
 alias python=python3
 
