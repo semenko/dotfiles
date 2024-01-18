@@ -21,6 +21,7 @@ brew 'httpie'
 brew 'jq' # Used for spatie/visit
 brew 'mackup'
 #brew 'mas' # Mac App Store manager
+brew 'ncdu'
 brew 'nmap'
 brew 'pipx'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
@@ -54,7 +55,6 @@ brew 'imagemagick'
 cask 'adobe-acrobat-reader'
 cask 'alt-tab'
 cask 'citrix-workspace'
-cask 'disk-inventory-x'
 #cask 'dbngin'
 cask 'google-chrome-beta'
 cask 'google-drive'
