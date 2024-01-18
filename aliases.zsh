@@ -1,5 +1,7 @@
 # Shortcuts
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask; brew cleanup; mamba update --all'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mamba update --all'
+
+# brew upgrade --cask
 
 alias python=python3
 
@@ -12,6 +14,8 @@ alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 #alias compile="commit 'compile'"
 #alias version="commit 'version'"
+
+alias zcat=gzcat
 
 # Directories
 alias dotfiles="cd $DOTFILES"
