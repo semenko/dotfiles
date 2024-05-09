@@ -1,23 +1,8 @@
 XAuthLocation /opt/X11/bin/xauth
 
-Host node1
+Host rcc
+     HostName 141.106.222.208
      User nsemenkovich
-
-Host node1-local
-     HostName 10.39.68.64 # 10.39.68.43
-     User nsemenkovich
-
-Host node2
-     User nsemenkovich
-
-Host ris
-     Hostname 10.25.19.91 
-     User semenkovichn
-
-Host ris3
-     Hostname 10.25.19.89
-     User semenkovichn
-
      
 Host *
      AddKeysToAgent yes
