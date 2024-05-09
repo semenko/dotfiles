@@ -77,6 +77,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # see 'man strftime' for details.
 HIST_STAMPS="dd/mm/yyyy"
 
+# LOTS OF HISTORY -semenko
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=1000000000
+export SAVEHIST=1000000000
+setopt EXTENDED_HISTORY
+
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$DOTFILES
 
