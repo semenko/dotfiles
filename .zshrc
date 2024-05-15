@@ -137,9 +137,9 @@ if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
     if [ -f "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/conda.sh"
+	. "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/homebrew/Caskroom/mambaforge/base/bin:$PATH"
+	export PATH="/opt/homebrew/Caskroom/mambaforge/base/bin:$PATH"
     fi
 fi
 unset __conda_setup
