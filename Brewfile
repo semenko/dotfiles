@@ -13,6 +13,7 @@ brew 'bc'
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'emacs'
 brew 'ffmpeg'
+brew 'flox'
 brew 'gh'
 brew 'git'
 brew 'grep'
