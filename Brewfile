@@ -11,6 +11,7 @@ brew 'bash' # Latest Bash version
 brew 'bat' # Used for spatie/visit
 brew 'bc'
 brew 'coreutils' # Those that come with macOS are outdated
+brew 'cosign'
 brew 'emacs'
 brew 'ffmpeg'
 brew 'flox'
