@@ -1,4 +1,3 @@
 My dotfiles.
 
-git clone git@github.com:semenko/dotfiles ~/.dotfiles
-cd ~/.dotfiles && ./fresh-install.sh
+git clone https://github.com/semenko/dotfiles/tree/main ~/.dotfiles && cd ~/.dotfiles && zsh ./fresh-install.sh
