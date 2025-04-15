@@ -3,8 +3,10 @@ XAuthLocation /opt/X11/bin/xauth
 Host rcc
      HostName 141.106.222.208
      User nsemenkovich
+     LocalForward 8000 localhost:8000
      
 Host *
      AddKeysToAgent yes
      UseKeychain yes
      IdentityFile ~/.ssh/id_ed25519
+     

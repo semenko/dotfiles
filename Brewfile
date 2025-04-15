@@ -30,6 +30,7 @@ brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'pyenv'
 brew 'r'
 brew 'rclone'
+brew 'starship'
 brew 'svn' # Needed to install fonts
 brew 'sha2'
 brew 'tmux'
@@ -56,7 +57,6 @@ brew 'imagemagick'
 # Apps
 cask 'adobe-acrobat-reader'
 cask 'alt-tab'
-cask 'citrix-workspace'
 #cask 'dbngin'
 cask 'google-chrome-beta'
 cask 'google-drive'
@@ -64,11 +64,9 @@ cask 'google-drive'
 cask 'imageoptim'
 cask 'insomnia'
 cask 'iterm2'
-# do we want mamba from here?
-cask 'mambaforge'
-cask 'microsoft-edge-beta'
+cask 'lulu'
 cask 'microsoft-office'
-cask 'microsoft-remote-desktop'
+cask 'windows-app'
 cask 'microsoft-teams'
 #cask 'pastebot'
 #cask 'phpmon'
@@ -89,7 +87,6 @@ cask 'tailscale'
 cask 'visual-studio-code-insiders'
 cask 'wireshark'
 cask 'vlc'
-cask 'vpn-by-google-one'
 cask 'zoom'
 cask 'zotero'
 
@@ -105,12 +102,3 @@ cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
 cask 'font-source-sans-3'
 cask 'font-source-serif-4'
-
-# Mac App Store
-#mas 'Byword', id: 420212497
-#mas 'Giphy Capture', id: 668208984
-#mas 'Keynote', id: 409183694
-#mas 'Numbers', id: 409203825
-#mas 'Speedtest', id: 1153157709
-#mas 'Spring', id: 1508706541
-#mas 'Things', id: 904280696
