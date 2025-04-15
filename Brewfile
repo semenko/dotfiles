@@ -25,6 +25,7 @@ brew 'mackup'
 #brew 'mas' # Mac App Store manager
 brew 'ncdu'
 brew 'nmap'
+brew 'pyenv'
 brew 'pipx'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'pyenv'
