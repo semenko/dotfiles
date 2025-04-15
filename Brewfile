@@ -1,10 +1,3 @@
-# Taps
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-tap 'homebrew/bundle'
-tap 'nicoverbruggen/homebrew-cask'
-
 # Binaries
 brew 'awscli'
 brew 'bash' # Latest Bash version
@@ -14,7 +7,6 @@ brew 'coreutils' # Those that come with macOS are outdated
 brew 'cosign'
 brew 'emacs'
 brew 'ffmpeg'
-brew 'flox'
 brew 'gh'
 brew 'git'
 brew 'grep'
