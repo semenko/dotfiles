@@ -12,7 +12,7 @@ brew 'git'
 brew 'grep'
 brew 'htop'
 brew 'httpie'
-brew 'jq' # Used for spatie/visit
+brew 'jq'
 brew 'mackup'
 #brew 'mas' # Mac App Store manager
 brew 'ncdu'
@@ -30,28 +30,19 @@ brew 'tmux'
 brew 'watch'
 brew 'wget'
 
-# Spatie Medialibrary
 brew 'jpegoptim'
 brew 'optipng'
 brew 'pngquant'
 brew 'svgo'
 brew 'gifsicle'
 
-# Development
-#brew 'composer'
 brew 'imagemagick'
-#brew 'meilisearch'
-#brew 'nginx'
-#brew 'node'
-#brew 'redis'
-#brew 'yarn'
-
 
 # Apps
 cask 'adobe-acrobat-reader'
 cask 'alt-tab'
 #cask 'dbngin'
-cask 'google-chrome-beta'
+cask 'google-chrome@beta'
 cask 'google-drive'
 #cask 'helo'
 cask 'imageoptim'
