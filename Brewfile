@@ -5,6 +5,7 @@ brew 'bat' # Used for spatie/visit
 brew 'bc'
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'cosign'
+brew 'dockutil'
 brew 'emacs'
 brew 'ffmpeg'
 brew 'gh'
