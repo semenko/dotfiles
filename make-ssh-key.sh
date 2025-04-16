@@ -13,5 +13,8 @@ eval "$(ssh-agent -s)"
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 
 # Adding your SSH key to your GitHub account
-echo "running pbcopy 'pbcopy < ~/.ssh/id_ed25519.pub' -- go paste that into GitHub"
-pbcopy < ~/.ssh/id_ed25519.pub
+# echo "running pbcopy 'pbcopy < ~/.ssh/id_ed25519.pub' -- go paste that into GitHub"
+# pbcopy < ~/.ssh/id_ed25519.pub
+
+gh auth login
+gh extension install github/gh-copilot
