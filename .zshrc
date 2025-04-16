@@ -88,4 +88,7 @@ fi
 unset __mamba_setup
 # <<< mamba initialize <<<
 
+eval "$(gh copilot alias -- zsh)"
+
 eval "$(starship init zsh)"
+
