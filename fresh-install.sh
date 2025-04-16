@@ -19,6 +19,11 @@ brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 brew cleanup
 
+# Some python configs
+pipx install cruft poetry nox
+pipx inject poetry poetry-plugin-export
+pipx inject nox nox-poetry
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./macos-prefs
 
