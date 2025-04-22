@@ -20,7 +20,7 @@ brew bundle --file ./Brewfile
 brew cleanup
 
 # Some python configs
-pipx install cruft poetry nox
+pipx install cruft poetry nox pre-commit pre-commit-hooks ruff black darglint
 pipx inject poetry poetry-plugin-export
 pipx inject nox nox-poetry
 
@@ -38,6 +38,12 @@ ln -Fs "${DOTFILES}/config-ssh" "${HOME}/.ssh/config"
 mkdir -p $HOME/.config/htop
 ln -Fs ${DOTFILES}/htoprc $HOME/.config/htop/htoprc
 
+# Auto-move downloads to trash after 7 days
+PLIST_PATH=~/Library/LaunchAgents/com.user.cleandownloads.daily.plist
+cp com.user.cleandownloads.daily.plist "$PLIST_PATH"
+launchctl load "$PLIST_PATH"
+
+
 ###
 # Open our new apps to configure them
 open -a "Google Chrome Beta"
@@ -47,3 +53,4 @@ open -a "Rectangle"
 open -a "Stats"
 open -a "Tailscale"
 open -a "LuLu"
+

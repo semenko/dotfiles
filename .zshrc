@@ -7,7 +7,6 @@ source $HOME/.dotfiles/aliases.zsh
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
-
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
@@ -52,10 +51,10 @@ export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
 export EDITOR=emacs
 
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
+export CLICOLOR=1
+
 export PYTHONIOENCODING='UTF-8'
 
 # Highlight section titles in manual pages.

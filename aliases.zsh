@@ -6,7 +6,7 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
-alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
+alias l="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 
@@ -29,3 +29,5 @@ alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
 alias unstage="git restore --staged ."
 alias wip="git commit -m 'wip'"
+
+alias ..="cd .."
