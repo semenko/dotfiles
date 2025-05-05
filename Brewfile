@@ -88,3 +88,5 @@ cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
 cask 'font-source-sans-3'
 cask 'font-source-serif-4'
+cask 'font-fira-code-nerd-font'
+
