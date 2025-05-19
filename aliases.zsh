@@ -13,9 +13,7 @@ alias c="clear"
 alias zcat=gzcat
 
 # Git
-alias gst="git status"
-alias gb="git branch"
-alias gc="git checkout"
+alias status="git status"
 alias gl="git log --oneline --decorate --color"
 alias amend="git add . && git commit --amend --no-edit"
 alias commit="git commit . -m"
