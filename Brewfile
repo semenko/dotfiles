@@ -41,7 +41,7 @@ brew 'imagemagick'
 
 # Apps
 cask 'adobe-acrobat-reader'
-cask 'alt-tab'
+#cask 'alt-tab'
 #cask 'dbngin'
 cask 'google-chrome@beta'
 cask 'google-drive'
