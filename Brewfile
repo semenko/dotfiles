@@ -18,10 +18,10 @@ brew 'mackup'
 #brew 'mas' # Mac App Store manager
 brew 'ncdu'
 brew 'nmap'
-brew 'pyenv'
 brew 'pipx'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'pyenv'
+brew 'pyenv-virtualenv'
 brew 'r'
 brew 'rclone'
 brew 'starship'
@@ -41,6 +41,7 @@ brew 'imagemagick'
 
 # Apps
 cask 'adobe-acrobat-reader'
+cask 'basictex'
 #cask 'alt-tab'
 #cask 'dbngin'
 cask 'google-chrome@beta'
