@@ -3,6 +3,7 @@ export DOTFILES=$HOME/.dotfiles
 
 # Load aliases
 source $HOME/.dotfiles/aliases.zsh
+source $HOME/.secrets
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.

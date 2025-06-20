@@ -55,6 +55,7 @@ cask 'lulu'
 cask 'microsoft-office'
 cask 'windows-app'
 cask 'microsoft-teams'
+cask 'netron' # ai viz
 #cask 'pastebot'
 #cask 'phpmon'
 #cask 'ray'
