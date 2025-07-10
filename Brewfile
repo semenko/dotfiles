@@ -28,6 +28,7 @@ brew 'starship'
 brew 'svn' # Needed to install fonts
 brew 'sha2'
 brew 'tmux'
+brew 'r-rec' # record terminal
 brew 'watch'
 brew 'wget'
 
