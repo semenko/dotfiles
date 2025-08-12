@@ -14,12 +14,7 @@ ENABLE_CORRECTION="true"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -69,18 +64,12 @@ export MANPAGER='less -X'
 export GPG_TTY=$(tty)
 
 export PATH=~/.local/bin:$PATH
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 export HOMEBREW_NO_ENV_HINTS=TRUE
 
 eval "$(gh copilot alias -- zsh)"
 
 eval "$(starship init zsh)"
-
 
 export CONDA_AUTO_ACTIVATE_BASE=false
 
@@ -112,3 +101,7 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

@@ -24,6 +24,7 @@ pipx install cruft poetry nox pre-commit pre-commit-hooks ruff black darglint
 pipx inject poetry poetry-plugin-export
 pipx inject nox nox-poetry
 
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./macos-prefs
 
