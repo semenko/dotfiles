@@ -15,7 +15,7 @@ alias zcat=gzcat
 # Git
 alias status="git status"
 alias gl="git log --oneline --decorate --color"
-alias amend="git add . && git commit --amend --no-edit"
+alias amend="git commit --amend --no-edit"
 alias commit="git commit . -m"
 alias diff="git diff"
 alias force="git push --force-with-lease"
