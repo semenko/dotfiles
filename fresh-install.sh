@@ -40,6 +40,10 @@ ln -Fs "${DOTFILES}/config-ssh" "${HOME}/.ssh/config"
 mkdir -p "${HOME}/.config/htop"
 ln -Fs ${DOTFILES}/htoprc $HOME/.config/htop/htoprc
 
+# Starship config
+mkdir -p "${HOME}/.config"
+ln -Fs "${DOTFILES}/starship.toml" "${HOME}/.config/starship.toml"
+
 # Auto-move downloads to trash after 7 days
 PLIST_PATH=~/Library/LaunchAgents/com.user.cleandownloads.daily.plist
 cp com.user.cleandownloads.daily.plist "$PLIST_PATH"
