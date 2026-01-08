@@ -37,16 +37,6 @@ setopt EXTENDED_HISTORY
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth'
 
-# Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$DOTFILES
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
 # You may need to manually set your language environment
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
@@ -77,28 +67,9 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 export HOMEBREW_NO_ENV_HINTS=TRUE
 
-eval "$(gh copilot alias -- zsh)"
-
 eval "$(starship init zsh)"
 
-
 export CONDA_AUTO_ACTIVATE_BASE=false
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba shell init' !!

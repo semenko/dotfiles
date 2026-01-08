@@ -17,4 +17,4 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 # pbcopy < ~/.ssh/id_ed25519.pub
 
 gh auth login
-gh extension install github/gh-copilot
+# gh extension install github/gh-copilot
