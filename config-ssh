@@ -1,5 +1,9 @@
 XAuthLocation /opt/X11/bin/xauth
 
+Host mac-mini-2025
+     HostName mac-mini-2025
+     User semenko
+
 Host rcc
      HostName 141.106.222.208
      User nsemenkovich
@@ -9,4 +13,3 @@ Host *
      AddKeysToAgent yes
      UseKeychain yes
      IdentityFile ~/.ssh/id_ed25519
-     
