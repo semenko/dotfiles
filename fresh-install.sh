@@ -32,10 +32,11 @@ DOTFILES=${HOME}/.dotfiles
 
 ln -Fs "${DOTFILES}/.gitconfig" "${HOME}/.gitconfig"
 ln -Fs "${DOTFILES}/.zshrc" "${HOME}/.zshrc"
+mkdir "${HOME}/.ssh"
 ln -Fs "${DOTFILES}/config-ssh" "${HOME}/.ssh/config"
 
 # HTOP subdir
-mkdir -p $HOME/.config/htop
+mkdir -p "${HOME}/.config/htop"
 ln -Fs ${DOTFILES}/htoprc $HOME/.config/htop/htoprc
 
 # Auto-move downloads to trash after 7 days
