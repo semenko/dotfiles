@@ -33,7 +33,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText 'Nick Semenkovich | semenko@alum.mit.edu'
 
 # Automatically lock the login keychain for inactivity after 6 hours.
-security set-keychain-settings -t 21600 -l "${HOME}/Library/Keychains/login.keychain"
+# security set-keychain-settings -t 21600 -l "${HOME}/Library/Keychains/login.keychain"
 
 # Activates Touch ID for sudo and make it persistent.
 # See: https://sixcolors.com/post/2023/08/in-macos-sonoma-touch-id-for-sudo-can-survive-updates/
