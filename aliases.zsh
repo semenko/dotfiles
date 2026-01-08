@@ -11,6 +11,7 @@ alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 
 alias zcat=gzcat
+alias python="python3"
 
 # Git
 alias status="git status"

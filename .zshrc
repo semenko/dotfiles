@@ -61,7 +61,11 @@ export GPG_TTY=$(tty)
 export PATH=~/.local/bin:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+pyenv() {
+    unset -f pyenv
+    eval "$(command pyenv init -)"
+    pyenv "$@"
+}
 
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
@@ -72,16 +76,22 @@ eval "$(starship init zsh)"
 export CONDA_AUTO_ACTIVATE_BASE=false
 
 # >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba shell init' !!
-export MAMBA_EXE='/opt/homebrew/Caskroom/miniforge/base/bin/mamba';
-export MAMBA_ROOT_PREFIX='/opt/homebrew/Caskroom/miniforge/base';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
-else
-    alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
-fi
-unset __mamba_setup
+mamba() {
+    unset -f mamba conda
+    export MAMBA_EXE='/opt/homebrew/Caskroom/miniforge/base/bin/mamba';
+    export MAMBA_ROOT_PREFIX='/opt/homebrew/Caskroom/miniforge/base';
+    __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__mamba_setup"
+    else
+        alias mamba="$MAMBA_EXE"
+    fi
+    unset __mamba_setup
+    mamba "$@"
+}
+conda() {
+    mamba "$@"
+}
 # <<< mamba initialize <<<
 
 # Added by Antigravity
