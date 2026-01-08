@@ -33,7 +33,7 @@ DOTFILES=${HOME}/.dotfiles
 
 ln -Fs "${DOTFILES}/.gitconfig" "${HOME}/.gitconfig"
 ln -Fs "${DOTFILES}/.zshrc" "${HOME}/.zshrc"
-mkdir "${HOME}/.ssh"
+mkdir -p "${HOME}/.ssh"
 ln -Fs "${DOTFILES}/config-ssh" "${HOME}/.ssh/config"
 
 # HTOP subdir
