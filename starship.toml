@@ -1,3 +1,5 @@
+scan_timeout = 100
+
 [pijul_channel]
 disabled = true
 
@@ -5,4 +7,16 @@ disabled = true
 disabled = true
 
 [netns]
+disabled = true
+
+[git_status]
+ignore_submodules = true
+
+[python]
+# 4. Stop Python from showing up just because a .py file exists.
+# Only show if explicit project markers are found.
+detect_extensions = []
+detect_files = ["pyproject.toml", "requirements.txt", "poetry.lock"]
+
+[pulumi]
 disabled = true
