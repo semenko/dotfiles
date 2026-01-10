@@ -1,2 +1,8 @@
 [pijul_channel]
 disabled = true
+
+[docker_context]
+disabled = true
+
+[netns]
+disabled = true
