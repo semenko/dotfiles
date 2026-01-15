@@ -193,4 +193,6 @@
 	process = git-lfs filter-process
 	required = true
 [pull]
-	ff = only
+	rebase = true
+[rebase]
+	autoStash = true
