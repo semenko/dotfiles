@@ -20,10 +20,7 @@ brew bundle --file ./Brewfile
 brew cleanup
 
 # Some python configs
-pipx install cruft poetry nox pre-commit pre-commit-hooks ruff black darglint
-pipx inject poetry poetry-plugin-export
-pipx inject nox nox-poetry
-
+pipx install cruft nox pre-commit pre-commit-hooks ruff black darglint uv
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./macos-prefs
