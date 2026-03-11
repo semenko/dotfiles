@@ -1,16 +1,17 @@
-# Shortcuts
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mamba update --all'
+# macOS-only shortcuts
+if [[ "$(uname)" == "Darwin" ]]; then
+    alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mamba update --all'
+    alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
+    alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+    alias l="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
+    alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
+    alias zcat=gzcat
+else
+    alias l="ls -AhlF --color --group-directories-first"
+fi
 
-# brew upgrade --cask
-
-alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
-
-alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
-alias l="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
-alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
+# Cross-platform
 alias c="clear"
-
-alias zcat=gzcat
 alias python="python3"
 
 # Git
