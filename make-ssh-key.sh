@@ -8,13 +8,10 @@ ssh-keygen -t ed25519 -C "semenko@alum.mit.edu" -f ~/.ssh/id_ed25519
 # Adding your SSH key to the ssh-agent
 eval "$(ssh-agent -s)"
 
-# echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_ed25519" | tee ~/.ssh/config
-
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-
-# Adding your SSH key to your GitHub account
-# echo "running pbcopy 'pbcopy < ~/.ssh/id_ed25519.pub' -- go paste that into GitHub"
-# pbcopy < ~/.ssh/id_ed25519.pub
+if [ "$(uname)" = "Darwin" ]; then
+    ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+else
+    ssh-add ~/.ssh/id_ed25519
+fi
 
 gh auth login
-# gh extension install github/gh-copilot

@@ -3,23 +3,25 @@ if [[ "$(uname)" == "Darwin" ]]; then
     alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mamba update --all'
     alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
     alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
-    alias l="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
     alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
     alias zcat=gzcat
-else
-    alias l="ls -AhlF --color --group-directories-first"
 fi
 
 # Cross-platform
+if [[ "$(uname)" == "Darwin" ]]; then
+    alias l="gls -AhlF --color --group-directories-first"
+else
+    alias l="ls -AhlF --color --group-directories-first"
+fi
 alias c="clear"
 alias python="python3"
 
 # Git
 alias status="git status"
 alias gl="git log --oneline --decorate --color"
+alias gd="git diff"
 alias amend="git commit --amend --no-edit"
 alias commit="git commit . -m"
-alias diff="git diff"
 alias force="git push --force-with-lease"
 alias nuke="git clean -df && git reset --hard"
 alias pop="git stash pop"

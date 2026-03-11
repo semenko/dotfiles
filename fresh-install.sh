@@ -15,12 +15,13 @@ fi
 brew update
 
 # Install all our dependencies with bundle (See Brewfile)
-#brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 brew cleanup
 
-# Some python configs
-pipx install cruft nox pre-commit pre-commit-hooks ruff black darglint uv
+# Python tools via uv
+uv tool install pre-commit
+uv tool install ruff
+uv tool install nox
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./macos-prefs
@@ -30,6 +31,8 @@ DOTFILES=${HOME}/.dotfiles
 
 ln -Fs "${DOTFILES}/.gitconfig" "${HOME}/.gitconfig"
 ln -Fs "${DOTFILES}/.zshrc" "${HOME}/.zshrc"
+ln -Fs "${DOTFILES}/.wgetrc" "${HOME}/.wgetrc"
+ln -Fs "${DOTFILES}/.tmux.conf" "${HOME}/.tmux.conf"
 mkdir -p "${HOME}/.ssh"
 ln -Fs "${DOTFILES}/config-ssh" "${HOME}/.ssh/config"
 
@@ -41,10 +44,13 @@ ln -Fs ${DOTFILES}/htoprc $HOME/.config/htop/htoprc
 mkdir -p "${HOME}/.config"
 ln -Fs "${DOTFILES}/starship.toml" "${HOME}/.config/starship.toml"
 
+# Suppress "Last login" banner
+ln -Fs "${DOTFILES}/.hushlogin" "${HOME}/.hushlogin"
+
 # Auto-move downloads to trash after 7 days
 PLIST_PATH=~/Library/LaunchAgents/com.user.cleandownloads.daily.plist
 cp com.user.cleandownloads.daily.plist "$PLIST_PATH"
-launchctl load "$PLIST_PATH"
+launchctl bootstrap gui/$(id -u) "$PLIST_PATH"
 
 
 ###
@@ -56,4 +62,3 @@ open -a "Rectangle"
 open -a "Stats"
 open -a "Tailscale"
 open -a "LuLu"
-
