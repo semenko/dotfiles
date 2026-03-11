@@ -1,0 +1,19 @@
+# Case-insensitive tab completion
+set completion-ignore-case on
+
+# Show all matches if ambiguous
+set show-all-if-ambiguous on
+
+# Arrow keys search history matching current prefix
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Color files by type during completion
+set colored-stats on
+
+# Append / to completed directory names
+set mark-directories on
+set mark-symlinked-directories on
+
+# Show completion type suffix (/ for dirs, @ for symlinks, etc.)
+set visible-stats on
