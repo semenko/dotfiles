@@ -20,3 +20,6 @@ detect_files = ["pyproject.toml", "requirements.txt", "poetry.lock"]
 
 [pulumi]
 disabled = true
+
+[nodejs]
+disabled = true
