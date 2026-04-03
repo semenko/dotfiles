@@ -174,8 +174,9 @@ sudo systemsetup -setrestartfreeze on
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+# Save screenshots to ~/Desktop/Screenshots
+mkdir -p "${HOME}/Desktop/Screenshots"
+defaults write com.apple.screencapture location -string "${HOME}/Desktop/Screenshots"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -453,6 +454,12 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 
 # iterm2 no native full screen
 defaults write com.googlecode.iterm2 UseLionStyleFullscreen -int 0
+
+# iterm2 disable GPU (Metal) rendering
+defaults write com.googlecode.iterm2 UseMetal -bool false
+
+# iterm2 show app icon in each tab (Icon: 0=none, 1=built-in, 2=custom)
+/usr/libexec/PlistBuddy -c "Set ':New Bookmarks':0:'Icon' 1" ~/Library/Preferences/com.googlecode.iterm2.plist
 
 ###############################################################################
 # Time Machine                                                                #
