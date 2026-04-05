@@ -18,6 +18,7 @@ export LANG=en_US.UTF-8
 
 export EDITOR=emacs
 export CLICOLOR=1
+export COLORTERM=truecolor
 export PYTHONIOENCODING='UTF-8'
 
 # Highlight section titles in manual pages.
