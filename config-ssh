@@ -5,6 +5,10 @@ Host mac-mini-2025
 Host rcc
      HostName 141.106.222.208
      User nsemenkovich
+<<<<<<< Updated upstream
+=======
+     RequestTTY yes
+>>>>>>> Stashed changes
 
 Host *
      AddKeysToAgent yes
